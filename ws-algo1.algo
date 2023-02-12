@@ -1,0 +1,74 @@
+ALGORITHM nb_length_insetence
+VAR
+    str: STRING :="type the sentence.";
+    count: INTEGER := 0;
+BEGIN
+    //counts each caracter expect space
+    FOR  (int i=0; 1<str.length();i++) DO
+    IF (str.charAr[i]!= ' ') THEN
+         count++;
+    END_IF
+    END_FOR 
+         
+         write(count);
+END
+
+ALGORITHM nb_length_insetence
+VAR
+   str : STRING := "type the sentence.";
+   count : INTEGER := 1;
+BEGIN
+FOR i in str DO
+IF str [i] ==" " THEN
+    count ++
+END_IF
+write(count)
+END
+ 
+ ALGORITHM SENTENCE
+
+VAR
+
+   nbv,nbw,nbc:= INTEGER ;
+
+   sentc:= STRING[] ;
+
+BEGIN
+
+  nbc:= 0 ;
+
+  nbw:= 1 ;
+
+  nbv:= 0;
+
+  write("type the sentence")
+
+  read(sentc)
+
+REPEAT
+
+   
+
+   IF (sentc[nbc]=" ") THEN
+
+       nbw:=nbw+1 ;
+
+   END_IF
+
+  IF (sentc[nbc] in ["a","e","u","i","o","y"]) THEN
+
+   nbv:= nbv +1 ;
+
+   END_IF
+
+   nbc := nbc+1 ;
+
+UNTIL (sentc[nbc]=".")
+
+write( "le nombre de caractere est ",nbc+1 )
+
+write (" le nombre de mot est ",nbw)
+
+write (" le nombre de voyelle est ",nbv)
+
+END
